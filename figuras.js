@@ -7,7 +7,7 @@ console.group("Cuadrado")
 function perimetroCuadrado(lado){
     return lado * 4;
 }
-//console.log("El perimetro del cuadrado: " + perimetroCuadrado + "cm");
+
 
 
 function areaCuadrado(lado){

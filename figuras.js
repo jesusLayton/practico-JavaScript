@@ -111,11 +111,12 @@ function calcularPerimetroTriangulo(){
     const input1 = document.getElementById("inputTriangulo1");
     const input2 = document.getElementById("inputTriangulo2");
     const input3 = document.getElementById("inputTriangulo3");
-    const value1 = input1.value;
-    const value2 = input2.value;
-    const value3 = input3.value;
+    const value1 = parseIn(input1.value);
+    const value2 = parseIn(input2.value);
+    const value3 = parseIn(input3.value);
+    
 
-    const perimietro = perimetroTriangulo(value1,value2,value3);
+    const perimietro = perimetroTriangulo  (value1,value2,value3);
     alert(perimietro);
 }
 
@@ -149,6 +150,32 @@ function calcularAreaCirculo(){
 
     const area = areaCirculo(value1);
     alert(area);
+}
+//altura de triangulo isoseles
+
+function calcularAlturaTriangulo(){
+    
+    const input1 = document.getElementById("inputTrianguloAltura1");
+    const input2 = document.getElementById("inputTrianguloAltura2");
+    const input3 = document.getElementById("inputTrianguloAltura2");
+
+    const value1 = input1.value;
+    const value2 = input2.value;
+    const value3 = input3.value;
+
+
+
+    if(value1 != value2){
+        return alert('no es un triangulo isoseles');
+    }else if(value1 == value2){
+        const alturaTriangulo = Math.sqrt((value1*value2)-(value3*value3)/4);
+        alert(alturaTriangulo);
+
+    }
+  
+    
+
+    
 }
 
 

@@ -48,6 +48,21 @@ function medianaSalarios(lista){
     }
 }
 
-console.log(
-    medianaSalarios(salarioColSorted)
+
+
+const apliceStart = (salarioColSorted.length*90)/100;
+const spliceCount =salarioColSorted.length - apliceStart;
+const salarioColTop10 = salarioColSorted.splice(
+    apliceStart,
+    spliceCount,
 );
+
+const medianaGeneral = medianaSalarios(salarioColSorted);
+
+const mediana10 =  medianaSalarios(salarioColTop10);
+
+console.log({
+    medianaGeneral,
+    mediana10,
+
+});
